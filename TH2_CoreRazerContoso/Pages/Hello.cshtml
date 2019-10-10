@@ -1,0 +1,26 @@
+﻿@page
+@model HelloModel
+@{
+    ViewData["Title"] = "Hello";
+}
+
+<header class="jumbotron">
+    <h2>ASP.NET Core Razor Pages - Hello</h2>
+    <h3>Dere Peacock</h3>
+    <p>
+        This page will ask for the name of the user
+        and it will say hello
+    </p>
+</header>
+<main>
+    <form method="Post">
+        <label>Please your name:</label>
+        <input type="text" asp-for="UserName" placeholder="Your Name" />
+        <input type="submit" />
+    </form>
+    <p>
+        Hello @Model.UserName
+    </p>
+</main>
+
+
