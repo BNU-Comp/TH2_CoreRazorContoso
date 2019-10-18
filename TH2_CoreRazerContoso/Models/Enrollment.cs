@@ -5,11 +5,19 @@ using System.Threading.Tasks;
 
 namespace TH2_CoreRazerContoso.Models
 {
+    /// <summary>
+    /// This represents a student enrolled on a course
+    /// Author: Derek
+    /// </summary>
     public class Enrollment
     {
+        // Primary Key
         public int EnrollmentID { get; set; }
+        // Foreign Key
         public int CourseID { get; set; }
+        // Foreign Key
         public int StudentID { get; set; }
+
         public Grades? Grade { get; set; }
 
         // Navigation/Relationship
