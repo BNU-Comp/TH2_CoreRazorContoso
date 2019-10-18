@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
 using TH2_CoreRazerContoso.Models;
 using Microsoft.Extensions.DependencyInjection;
+using TH2_CoreRazerContoso.Data;
 
 namespace TH2_CoreRazerContoso
 {
@@ -21,7 +22,9 @@ namespace TH2_CoreRazerContoso
                 try
                 {
                     var context = services.GetRequiredService<UniversityContext>();
-                    context.Database.EnsureCreated();
+                    DbInitialiser.Initialize(context);
+                    
+                    //context.Database.EnsureCreated();
                 }
                 catch (Exception ex)
                 {
