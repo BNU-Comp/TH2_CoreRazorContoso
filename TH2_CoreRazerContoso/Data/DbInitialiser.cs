@@ -39,12 +39,12 @@ namespace TH2_CoreRazerContoso.Data
 
             var courses = new Course[]
             {
-                new Course{CourseID=1050,Title="Chemistry",Credits=3},
-                new Course{CourseID=4022,Title="Microeconomics",Credits=3},
-                new Course{CourseID=4041,Title="Macroeconomics",Credits=3},
-                new Course{CourseID=1045,Title="Calculus",Credits=4},
-                new Course{CourseID=3141,Title="Trigonometry",Credits=4},
-                new Course{CourseID=2021,Title="Composition",Credits=3},
+                new Course{CourseID=1,Title="Chemistry",Credits=3},
+                new Course{CourseID=2,Title="Microeconomics",Credits=3},
+                new Course{CourseID=3,Title="Macroeconomics",Credits=3},
+                new Course{CourseID=4,Title="Calculus",Credits=4},
+                new Course{CourseID=5,Title="Trigonometry",Credits=4},
+                new Course{CourseID=6,Title="Composition",Credits=3},
                 new Course{CourseID=2042,Title="Literature",Credits=4}
             };
 
@@ -57,18 +57,18 @@ namespace TH2_CoreRazerContoso.Data
 
             var enrollments = new Enrollment[]
             {
-                new Enrollment{StudentID=1,CourseID=1050,Grade=Grades.First},
-                new Enrollment{StudentID=1,CourseID=4022,Grade=Grades.LowerSecond},
-                new Enrollment{StudentID=1,CourseID=4041,Grade=Grades.UpperSecond},
-                new Enrollment{StudentID=2,CourseID=1045,Grade=Grades.UpperSecond},
-                new Enrollment{StudentID=2,CourseID=3141,Grade=Grades.Pass},
-                new Enrollment{StudentID=2,CourseID=2021,Grade=Grades.Fail},
-                new Enrollment{StudentID=3,CourseID=1050},
-                new Enrollment{StudentID=4,CourseID=1050},
-                new Enrollment{StudentID=4,CourseID=4022,Grade=Grades.Fail},
-                new Enrollment{StudentID=5,CourseID=4041,Grade=Grades.LowerSecond},
-                new Enrollment{StudentID=6,CourseID=1045},
-                new Enrollment{StudentID=7,CourseID=3141,Grade=Grades.First},
+                new Enrollment{StudentID=1,CourseID=1,Grade=Grades.First},
+                new Enrollment{StudentID=1,CourseID=2,Grade=Grades.LowerSecond},
+                new Enrollment{StudentID=1,CourseID=3,Grade=Grades.UpperSecond},
+                new Enrollment{StudentID=2,CourseID=4,Grade=Grades.UpperSecond},
+                new Enrollment{StudentID=2,CourseID=5,Grade=Grades.Pass},
+                new Enrollment{StudentID=2,CourseID=6,Grade=Grades.Fail},
+                new Enrollment{StudentID=3,CourseID=1},
+                new Enrollment{StudentID=4,CourseID=1},
+                new Enrollment{StudentID=4,CourseID=2,Grade=Grades.Fail},
+                new Enrollment{StudentID=5,CourseID=3,Grade=Grades.LowerSecond},
+                new Enrollment{StudentID=6,CourseID=4},
+                new Enrollment{StudentID=7,CourseID=5,Grade=Grades.First},
             };
 
             foreach (Enrollment e in enrollments)

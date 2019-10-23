@@ -27,7 +27,10 @@ namespace TH2_CoreRazerContoso.Pages.Students
                 return NotFound();
             }
 
-            Student = await _context.Student.FirstOrDefaultAsync(m => m.StudentID == id);
+            Student = await _context.Student.Include(s => s.Enrollments)
+                            .ThenInclude(e => e.Course)
+                            .AsNoTracking()
+                            .FirstOrDefaultAsync(m => m.StudentID == id);
 
             if (Student == null)
             {
