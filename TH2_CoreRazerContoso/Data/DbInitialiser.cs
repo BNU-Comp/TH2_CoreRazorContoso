@@ -10,8 +10,6 @@ namespace TH2_CoreRazerContoso.Data
     {
         public static void Initialize(UniversityContext context)
         {
-            context.Database.EnsureCreated();
-
             // Look for any students.
             if (context.Student.Any())
             {
@@ -45,7 +43,7 @@ namespace TH2_CoreRazerContoso.Data
                 new Course{CourseID=4,Title="Calculus",Credits=4},
                 new Course{CourseID=5,Title="Trigonometry",Credits=4},
                 new Course{CourseID=6,Title="Composition",Credits=3},
-                new Course{CourseID=2042,Title="Literature",Credits=4}
+                new Course{CourseID=7,Title="Literature",Credits=4}
             };
 
             foreach (Course c in courses)
