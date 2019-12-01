@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace TH2_CoreRazerContoso.Pages
+namespace TH2_CoreRazerContoso.Pages.Home
 {
     public class IndexModel : PageModel
     {
