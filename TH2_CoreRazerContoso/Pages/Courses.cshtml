@@ -1,0 +1,68 @@
+﻿@page "/Courses"
+@model TH2_CoreRazerContoso.Pages.CoursesModel
+
+@{
+    ViewData["Title"] = "Courses";
+}
+<header class="jumbotron">
+    <h1>Derek Razor Pages</h1>
+    <h2>Contoso University - Available Courses</h2>
+</header>
+<main class="row">
+    <section class="col-lg-6">
+        <table class="table table-bordered table-hover">
+            <thead class="bg-info">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Course[0].Title)
+                    </th>
+                    <th class="text-center">
+                        @Html.DisplayNameFor(model => model.Course[0].Credits)
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Course)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.Credits)
+                        </td>
+                        <td>
+                            <a class="btn btn-success" asp-page="/Details" asp-route-id="@item.CourseID">Details</a>
+                            <a class="btn btn-info" asp-page="/Enrol" asp-route-id="@item.CourseID">Enrol</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+    <section class="col-lg-6">
+        @foreach (var item in Model.Course)
+        {
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">@item.Title</h3>
+                </div>
+                <div class="panel-body">
+                    <h4>Credits @item.Credits</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus, ante vitae lobortis gravida, massa nibh semper est, vitae hendrerit tortor ex ut arcu.
+                        Praesent mollis venenatis est eget placerat.
+                    </p>
+                    <p class="text-right">
+                        <a class="btn btn-default" asp-page="/Enrol" asp-route-id="@item.CourseID">Enrol</a>
+                    </p>
+                </div>
+            </div>
+        }
+    </section>
+        
+
+</main>
